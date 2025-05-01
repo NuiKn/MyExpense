@@ -1,9 +1,11 @@
-import { log } from "console";
+
 import fs from "fs";
 import { NextResponse } from "next/server";
 import path from "path";
 
-const filePath = path.join(process.cwd(), "expense.txt");
+const filePath = path.join('/tmp', 'expense.txt');
+/* const filePath = path.join(process.cwd(), "tmp", "expense.txt"); */
+
 let fileContent = "";
 
 export async function GET(request) {
